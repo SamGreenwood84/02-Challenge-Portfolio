@@ -1,7 +1,5 @@
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+    box-sizing: border-box 0;
 }
 
 body {
@@ -18,13 +16,13 @@ header {
   background-repeat:no-repeat; 
   width: auto;
   height: auto;
+  text-align: center;
 }
 
 header h1 {
   font-size: 100px;
   color:black;
   text-shadow: 2px 2px whitesmoke;
-  text-align: center;
 }
 
 .nav {
@@ -54,10 +52,16 @@ main {
     flex-direction: column;
     align-items: center;
     list-style: none;
-    height: 1000px;
+    height: auto;
     width: 100%;
     padding: 20px;
     }
+
+    .flex-container {
+        display: flex;
+        margin-top: 100px;
+        margin-bottom: 100px;
+      }
 
     .container {
         display: flex;
@@ -65,12 +69,20 @@ main {
         align-items: center;
       }
       
-      .container h2 {
+    footer,
+    .container h2,
+    .development li h2,
+    .marketing li h2,
+    .art li h2, 
+    #scrolling0--wrapper h2 {
+        background-image: URL("../images/purplespace.jpg");
+    }
+
+    .container h2 {
         color: black;
         font-size: 50px;
         font-weight: bold;
         text-shadow: 1px 1px whitesmoke;
-        background-image: URL("../images/purplespace.jpg");
         margin: 0;
         padding: 30px;
         margin-top: 5%;
@@ -105,10 +117,10 @@ main {
         font-size: 20px;
         font-weight: bolder;
         text-align: center;
-        margin: 0;
         background-image: URL("../images/purplecosmos.jpg");
         width: 66%;
-        padding: 20px;
+        min-width:fit-content;
+        padding: 5px;
       }
       
       #deployed {
@@ -116,31 +128,77 @@ main {
       margin:auto;
       }
       
-      .development {
+      .development,
+      .marketing,
+      .art {
         list-style: none;
         margin: 0;
         padding: 0;
         display: block;
       }
       
-      .development li {
+      .development li,
+      .marketing li 
+      .at li {
         display:block;
         padding: 5px;
       }
-      .development li h2 {
+
+      .development li h2,
+      .marketing li h2,
+      .art li h2 {
         color:whitesmoke;
         text-shadow: 0.25px 0.25px black;
-        background-image: URL("../images/purplespace.jpg");
         text-align:center;
         font-weight: bold;
         margin-top: auto;
       }
       
       .development img {
+      width: 100%;
+      object-fit: cover;
+      padding-top: 10px;
+      align-items: center;
+      }
+
+      .marketing img,
+      .art img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         padding-top: 10px;
+      }
+
+      /*added scrolling-wrapper for better organization and easier to view display*/
+      .scroll-wrapper {
+        display: inline-block;
+        flex-direction: column;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        white-space: nowrap;
+        height: 800px;
+        width: 50%;
+      }
+      
+      #scroll-wrapper {
+        display: inline-block;
+        flex-direction: column;
+        height: 800px;
+        width: 50%;
+      }
+      
+      #scroll-wrapper h2 {
+        color:whitesmoke;
+        text-shadow: 0.25px 0.25px black;
+        background-image: URL("../images/purplespace.jpg");
+        text-align: center;
+        text-align:center;
+        font-weight: bold;
+        position: absolute;
+        align-items: center;
+        width:50%;
+        height: 800px;
+        margin-top: 5px;
       }
 
     #navbar {
@@ -156,7 +214,6 @@ main {
           font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
           width: 100%;
           height: 100px;
-          background-image: URL("../images/purplespace.jpg");
       }
       
       footer ul {
@@ -172,7 +229,7 @@ main {
     /*added media query to work with different media*/
       @media screen and (max-width: 768px) {
         body {
-          background-image: URL("/challenges/02-Challenge_Portfolio/assets/images/purplespace.jpg");
+          background-image: URL("/challenges/02-Challenge_Portfolio/assets/images/purplespace");
           flex-wrap: wrap;
         }
         header h1 {
