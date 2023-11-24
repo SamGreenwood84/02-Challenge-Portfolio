@@ -48,3 +48,137 @@ header h1 {
   text-shadow: 0.5px 0.5px whitesmoke;
   font-weight: bolder;
 }
+
+main {
+    display: inline-block;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    height: 1000px;
+    width: 100%;
+    padding: 20px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .container h2 {
+        color: black;
+        font-size: 50px;
+        font-weight: bold;
+        text-shadow: 1px 1px whitesmoke;
+        background-image: URL("../images/purplespace.jpg");
+        margin: 0;
+        padding: 30px;
+        margin-top: 5%;
+        text-align: center;
+        min-width: 100px;
+      }
+      
+      .about {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding-top: 0;
+        align-items: center;
+      }
+      
+      .about ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0;
+      }
+      
+      #img {
+        display: flex;
+        flex-direction: row;
+      }
+      
+      #p {
+        color: whitesmoke;
+        text-shadow: 0.5px 0.5px black;
+        font-size: 20px;
+        font-weight: bolder;
+        text-align: center;
+        margin: 0;
+        background-image: URL("../images/purplecosmos.jpg");
+        width: 66%;
+        padding: 20px;
+      }
+      
+      #deployed {
+      width:75%;
+      margin:auto;
+      }
+      
+      .development {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: block;
+      }
+      
+      .development li {
+        display:block;
+        padding: 5px;
+      }
+      .development li h2 {
+        color:whitesmoke;
+        text-shadow: 0.25px 0.25px black;
+        background-image: URL("../images/purplespace.jpg");
+        text-align:center;
+        font-weight: bold;
+        margin-top: auto;
+      }
+      
+      .development img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        padding-top: 10px;
+      }
+
+    #navbar {
+        display:flex;
+        justify-content: space-between;
+        padding: 30px;
+        margin:0;
+        }
+      
+      footer {
+          padding: 20px;
+          margin-top: auto;
+          font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+          width: 100%;
+          height: 100px;
+          background-image: URL("../images/purplespace.jpg");
+      }
+      
+      footer ul {
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        color: black;
+        font-weight: bold;
+        text-shadow: 1px 1px whitesmoke;
+        font-size: 30px;
+      }
+    /*added media query to work with different media*/
+      @media screen and (max-width: 768px) {
+        body {
+          background-image: URL("/challenges/02-Challenge_Portfolio/assets/images/purplespace.jpg");
+          flex-wrap: wrap;
+        }
+        header h1 {
+          font-size: 100px;
+        }
+        .about {
+          font-size: 30px;
+        }
+      }
