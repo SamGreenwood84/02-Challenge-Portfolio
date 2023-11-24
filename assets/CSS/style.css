@@ -119,7 +119,7 @@ main {
         text-align: center;
         background-image: URL("../images/purplecosmos.jpg");
         width: 66%;
-        min-width:fit-content;
+        min-width: fit-content;
         padding: 5px;
       }
       
